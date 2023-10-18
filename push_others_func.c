@@ -56,3 +56,29 @@ void push(stack_t **stack, unsigned int line_num)
 	(*stack)->prev = NULL;
 	*stack = new;
 }
+
+
+
+/**
+ * pop - pops top element of the stack
+ * @line_num: line number
+ * @stack: stack of ints
+ */
+
+void pop(stack_t **stack, unsigned int line_num)
+{
+	stack_t *tmp;
+
+	if (*stack)
+	{
+		tmp = (*stack)->next;
+		free(*stack);
+		*stack = tmp;
+	}
+	else
+	{
+		val.err_code = -1;
+		p_error("", "Can't pop an empty stack", *stack, line_num, "", "");
+	}
+}
+

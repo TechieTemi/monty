@@ -116,6 +116,7 @@ int main(int ac, char **av)
 		{"pstr", pstr},
 		{"pchar", pchar},
 		{"push", push},
+		{"pop", pop},
 		{NULL, NULL}
 	};
 
