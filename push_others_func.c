@@ -78,7 +78,7 @@ void pop(stack_t **stack, unsigned int line_num)
 	else
 	{
 		val.err_code = -1;
-		p_error("", "Can't pop an empty stack", *stack, line_num, "", "");
+		p_error("", "can't pop an empty stack", *stack, line_num, "", "");
 	}
 }
 
