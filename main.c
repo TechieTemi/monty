@@ -123,6 +123,7 @@ int main(int ac, char **av)
 		{"sub", sub},
 		{"div", div_},
 		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
