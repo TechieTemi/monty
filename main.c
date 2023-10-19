@@ -122,6 +122,7 @@ int main(int ac, char **av)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", div_},
+		{"mul", mul},
 		{NULL, NULL}
 	};
 
