@@ -118,6 +118,7 @@ int main(int ac, char **av)
 		{"push", push},
 		{"pop", pop},
 		{"swap", swap},
+		{"add", add},
 		{NULL, NULL}
 	};
 
