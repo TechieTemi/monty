@@ -82,3 +82,30 @@ void pop(stack_t **stack, unsigned int line_num)
 	}
 }
 
+
+
+/**
+ * swap - swaps top two on the stack
+ * @line_num: line number
+ * @stack: stack of ints
+ */
+
+void swap(stack_t **stack, unsigned int line_num)
+{
+	if (!*stack || !(*stack)->next)
+	{
+		val.err_code = -1;
+		p_error("", "can't swap, stack too short", *stack, line_num, "", "");
+	}
+	else
+	{
+		stack_t *current = *stack;
+		stack_t *next_node = (*stack)->next;
+
+		int temp = current->n;
+
+		current->n = next_node->n;
+		next_node->n = temp;
+	}
+}
+

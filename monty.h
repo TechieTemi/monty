@@ -68,5 +68,6 @@ void push(stack_t **stack, unsigned int line_num);
 int convert_string_to_int(char *string, int line, char *token, stack_t *stack);
 void exec_ops(char *buffer, instruction_t ops[], int line_num, stack_t **stack);
 void pop(stack_t **stack, unsigned int line_num);
+void swap(stack_t **stack, unsigned int line_num);
 
 #endif
