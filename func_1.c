@@ -50,3 +50,31 @@ void mod(stack_t **stack, unsigned int line_num)
 	(*stack)->next->n = n;
 	pop(stack, line_num);
 }
+
+/**
+ * rotl - swaps top two with the bottom
+ * @line_num: line number
+ * @stack: stack of ints
+ */
+void rotl(stack_t **stack, unsigned int line_num)
+{
+	stack_t *n;
+
+	if (*stack == NULL || (*stack)->next == NULL)
+	{
+		return; /* Nothing to rotate if the stack is empty or has only one element*/
+	}
+
+	n = *stack;
+	while (n->next != NULL)
+	{
+		n = n->next;
+	}
+
+	n->next = *stack;
+	(*stack)->prev = n;
+	*stack = (*stack)->next;
+	n->next->next = NULL;
+
+	(void)line_num;
+}

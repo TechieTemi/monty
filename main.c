@@ -124,6 +124,7 @@ int main(int ac, char **av)
 		{"div", div_},
 		{"mul", mul},
 		{"mod", mod},
+		{"rotl", rotl},
 		{NULL, NULL}
 	};
 
